@@ -5,7 +5,7 @@ Based on the model output it gives prompt to bielik-11b-v2.3-instruct:Q6_K on Ol
 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/7c38594d-4b07-4cb5-9da9-06240bc305d0" />
+  <img src="https://github.com/user-attachments/assets/e5fff0b9-65b6-46dc-9d97-237ceb94f53d" />
   <br />
   Example of program usage
 </p>
