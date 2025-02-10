@@ -1,0 +1,6 @@
+fastapi==0.115.8
+language_tool_python==2.8.1
+pydub==0.25.1
+scipy==1.15.1
+sounddevice==0.5.1
+transformers==4.48.3
