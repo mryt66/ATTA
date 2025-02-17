@@ -7,7 +7,11 @@ import language_tool_python
 import json
 from utils.correction import transcribe_audio_file, pipe1, tool1
 
-app = FastAPI()
+app = FastAPI(
+    title="Voice Assistant API",
+    description="API for audio to text to audio processing",
+    version="0.1.0"
+)
 
 @app.on_event("startup")
 def load_model():
@@ -16,7 +20,7 @@ def load_model():
     pipe = pipe1
     tool = tool1
 
-@app.post("/transcribe/")
+@app.post("/transcribe/", summary="Transcribe an audio file")
 async def handle_transcription(file: UploadFile = File(...)):
     """Endpoint for handling audio file uploads"""
     if not file.filename.lower().endswith(('.mp3', '.wav')):
@@ -38,7 +42,7 @@ async def handle_transcription(file: UploadFile = File(...)):
     
     return {"transcription": transcription}
 
-@app.post("/chat_llm/")
+@app.post("/chat_llm/", summary="Chat with a language model")
 async def chat(text: str = Body(..., embed=True)):
     url = "http://localhost:11434/api/chat"
     headers = {"Content-Type": "application/json"}
