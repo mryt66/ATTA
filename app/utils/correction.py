@@ -1,8 +1,7 @@
 import language_tool_python
 from transformers import pipeline
 
-# pipe1 = pipeline(model="marcsixtysix/whisper-base-pl")
-pipe1 = pipe = pipeline("automatic-speech-recognition", model="openai/whisper-large-v3")
+pipe = pipeline(model="marcsixtysix/whisper-base-pl")
 tool1 = language_tool_python.LanguageTool('pl')
 
 def correct_polish_text(text):
@@ -28,5 +27,5 @@ def correct_polish_text(text):
 
 def transcribe_audio_file(file_path: str) -> str:
     """Transcribe audio file and return corrected text"""
-    result = pipe1(file_path, generate_kwargs={"language": "polish"})
+    result = pipe(file_path, generate_kwargs={"language": "polish"})
     return correct_polish_text(result["text"])
