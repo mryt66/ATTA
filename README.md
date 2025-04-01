@@ -6,7 +6,7 @@ The program is currently using my tunned version of whisper-base model "marcsixt
 You can see the model in my github repository:
 https://github.com/mryt66/Speech-recognition-pl
 
-Output of speech recognition model is proceed by Language tool, that formats the string that is later sent to Large Language Model "bielik-11b-v2.3-instruct:Q6_K" using Ollama.
+Output of speech recognition model is proceed by Language tool, that formats the string that is later sent to Large Language Model "gemma-3-4b-it-pl-polqa" using Ollama.
 After getting the response of LLM it is sent to Zonos model that creates a voice output.
 
 <p align="center">
