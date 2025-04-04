@@ -47,12 +47,12 @@ async def chat(text: str = Body(..., embed=True)):
     url = "http://localhost:11434/api/chat"
     headers = {"Content-Type": "application/json"}
     data = {
-        "model": "SpeakLeash/bielik-11b-v2.3-instruct:Q6_K",
+        "model": "marcsixtysix/gemma-3-4b-it-pl-polqa",
         "messages": [
             {"role": "user", "content": text},
         ],
         "stream": False,
-        "max_length": 10
+        "max_length": 128
     }
     try:
         response = requests.post(url, headers=headers, json=data)
