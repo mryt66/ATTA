@@ -1,5 +1,5 @@
 ## Api Audio to text to audio
-ATA is a voice chatbot. It gets audio and returns proceed audio by LLM.
+ATTA is a voice chatbot. It gets audio and returns proceed audio by LLM.
 For now everything is running on Fast API.
 
 The program is currently using my tunned version of whisper-base model "marcsixtysix/whisper-base-pl" to speech recognition.
