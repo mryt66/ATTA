@@ -47,7 +47,7 @@ async def chat(text: str = Body(..., embed=True)):
     url = "http://localhost:11434/api/chat"
     headers = {"Content-Type": "application/json"}
     data = {
-        "model": "marcsixtysix/gemma-3-4b-it-pl-polqa",
+        "model": "marcsixtysix/gemma-3-1b-it-pl-polqa",
         "messages": [
             {"role": "user", "content": text},
         ],
