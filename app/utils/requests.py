@@ -27,11 +27,3 @@ class ATTAPI:
         except requests.exceptions.RequestException as e:
             print(f"Request failed: {e}")
             return None
-
-# def tts(text: str):
-#     response = requests.post(url+"tts/", data=text)
-#     if response.status_code == 200:
-#         print(response.text)
-#         return response.text
-#     else:
-#         print(f"Error {response.status_code}: {response.text}")

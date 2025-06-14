@@ -3,12 +3,9 @@ import os
 import requests
 from fastapi.responses import JSONResponse
 from pydub import AudioSegment
-import io
 import base64
 from fastapi import FastAPI, File, UploadFile, HTTPException, Form, Body
 from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
-import language_tool_python
-import json
 from utils.correction import transcribe_audio_file, pipe1, tool1
 
 app = FastAPI(
@@ -71,7 +68,6 @@ async def chat(text: str = Body(..., embed=True)):
     except requests.exceptions.RequestException as e:
         raise HTTPException(status_code=502, detail=f"Error connecting to LLM: {str(e)}")
 
-    
     return result["message"]["content"]
 
 @app.post("/tts/")

@@ -3,6 +3,10 @@ from scipy.io.wavfile import write
 from pydub import AudioSegment
 from utils.requests import ATTAPI
 import time
+import asyncio
+
+from utils.tts import generate_polish_audio
+
 
 SAMPLE_RATE = 44100
 DURATION = 5  
@@ -29,3 +33,6 @@ time2 = time.time()
 response_llm = atta_object.llm(response["transcription"])
 print(f"Time for LLM response: {time.time()-time2}")
 print(response_llm)
+
+
+await generate_polish_audio(response_llm, "output.mp3")
