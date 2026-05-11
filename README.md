@@ -27,8 +27,8 @@ uv pip install -e .
 
 ## Demo
 
-<a href="https://youtu.be/sgoOZmvQulU" target="_blank">
-  <img src="https://img.youtube.com/vi/sgoOZmvQulU/0.jpg" width="600" alt="Demo video">
+<a href="https://youtu.be/SxpueO0oUIo" target="_blank">
+  <img src="https://img.youtube.com/vi/SxpueO0oUIo/0.jpg" width="600" alt="Demo video">
 </a>
 
 Demo shows the full pipeline: recording voice → transcription → LLM response → TTS playback.
