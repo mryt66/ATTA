@@ -5,8 +5,15 @@ ATTA is a voice chatbot API that transcribes audio (speech-to-text), processes i
 ## Requirements
 
 - Python 3.12+
-- [Ollama](https://ollama.com/) running locally with model `hf.co/marcsixtysix/gemma-3-1b-it-pl-polqa`
+- [Ollama](https://ollama.com/) running locally
 - ffmpeg (required by pydub for audio processing)
+
+## Models
+
+Both models are finetuned by me for Polish:
+
+- **STT**: [`marcsixtysix/whisper-base-pl`](https://huggingface.co/marcsixtysix/whisper-base-pl) — Whisper base finetuned on Polish speech
+- **LLM**: [`marcsixtysix/gemma-3-1b-it-pl-polqa`](https://huggingface.co/marcsixtysix/gemma-3-1b-it-pl-polqa) — Gemma 3 1B instruct finetuned on Polish Q&A
 
 ## Setup
 
@@ -20,7 +27,9 @@ uv pip install -e .
 
 ## Demo
 
-<video src="./assets/demo_atta.mp4" controls width="600"></video>
+<video src="https://github.com/mryt66/ATTA/raw/main/assets/demo_atta.mp4" controls width="600"></video>
+
+Demo shows the full pipeline: recording voice → transcription → LLM response → TTS playback.
 
 ## Run
 
