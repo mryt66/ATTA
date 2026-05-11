@@ -27,7 +27,9 @@ uv pip install -e .
 
 ## Demo
 
-<video src="https://github.com/mryt66/ATTA/raw/main/assets/demo_atta.mp4" controls width="600"></video>
+<a href="https://youtu.be/sgoOZmvQulU" target="_blank">
+  <img src="https://img.youtube.com/vi/sgoOZmvQulU/0.jpg" width="600" alt="Demo video">
+</a>
 
 Demo shows the full pipeline: recording voice → transcription → LLM response → TTS playback.
 
