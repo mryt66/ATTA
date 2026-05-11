@@ -1,0 +1,8 @@
+agents.md
+inputs/
+storage/
+commands.txt
+.venv/
+__pycache__/
+*.pyc
+.env
